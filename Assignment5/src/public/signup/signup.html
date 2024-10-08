@@ -1,0 +1,57 @@
+<form class="container" name="signUpForm" novalidate ng-submit="signup.submit(signUpForm);">
+    <h1 class="text-center" style="margin-bottom: 4%;">Sign Up for the NewsLetter!</h1>
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <label for="firstName">First Name *</label>
+            <span class="alert-danger" ng-show="signUpForm.firstName.$error.required &&
+             (!signUpForm.firstName.$pristine || signUpForm.$submitted)">Please enter your first name.</span>
+            <input type="text" id="firstName" name="firstName" ng-model="signup.firstName"
+            class="form-control" placeholder="First Name" required></input>
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="lastName">Last Name *</label>
+            <span class="alert-danger" ng-show="signUpForm.lastName.$error.required &&
+             (!signUpForm.lastName.$pristine || signUpForm.$submitted)">Please enter your last name.</span>
+            <input type="text" id="lastName" name="lastName" required ng-model="signup.lastName"
+            class="form-control" placeholder="Last Name"></input>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <label for="email">Email address *</label>
+            <span class="alert-danger" ng-show="signUpForm.email.$error.required &&
+             (!signUpForm.email.$pristine || signUpForm.$submitted)">Please enter an email address.</span>
+             <!-- <span class="alert-danger" ng-show="signUpForm.email.$error.email">
+             Please enter a valid email address.</span> -->
+            <input type="text" id="email" name="email" required ng-model="signup.email"
+            class="form-control" placeholder="Email address"></input>
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="phone">Phone Number *</label>
+            <span class="alert-danger" ng-show="signUpForm.phone.$error.required &&
+             (!signUpForm.phone.$pristine || signUpForm.$submitted)">Please enter a phone number.</span>
+             <span ng-show="signUpForm.phone.$error.minlength || signUpForm.phone.$error.maxlength"
+             class="alert-danger">Your phone number should be 9 digits long.</span>
+            <input type="text" id="phone" name="phone" required ng-model="signup.phone"
+            class="form-control" placeholder="Phone Number" ng-minlength="9" ng-maxlength="9"></input>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <label for="shortName">Favorite Dish(Short Name) *</label>
+            <span class="alert-danger" ng-show="signUpForm.shortName.$error.required &&
+             (!signUpForm.shortName.$pristine || signUpForm.$submitted)">Please enter the short name.</span>
+             <span class="alert-danger" ng-show="signup.showError">Invalid short Name!</span>
+            <input type="text" id="shortName" name="shortName" required ng-model="signup.shortName"
+            class="form-control" placeholder="Short Name"></input>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-sm-12">
+            <button type="submit" required
+            class="form-control btn">Sign Up</button>
+            <span class="alert-success text-center"
+            ng-show="signup.showMessage">Information has been saved!</span>
+        </div>
+    </div>
+</form>

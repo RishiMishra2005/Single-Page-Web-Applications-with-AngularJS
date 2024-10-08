@@ -1,0 +1,22 @@
+
+<div class="container" ng-hide="myinfo.isUserRegistered">
+    <h1 class="text-center">Not Signed Up Yet. Sign up Now!</h1>
+    <div class="text-center" style="margin-top: 5%;">
+        <button type="button" class="btn btn-primary btn-lg"
+        ui-sref="public.signup">Sign Up</button>
+    </div>
+</div>
+<div class="container" ng-show="myinfo.isUserRegistered">
+    <p>First Name: {{myinfo.user.firstName}}</p>
+    <p>Last Name: {{myinfo.user.lastName}}</p>
+    <p>Phone Number: {{myinfo.user.phone}}</p>
+    <p>Email Address: {{myinfo.user.email}}</p>
+    <p>Short Name: {{myinfo.user.shortName}}</p>
+    <p>Favorite Item Name: {{myinfo.user.favoriteItemDetails.name}}</p>
+    <p>Favorite Item description: {{myinfo.user.favoriteItemDetails.description}}</p>
+    <div id="image">
+        <img class="img-responsive"
+        ng-src="{{myinfo.ApiPath}}/images/{{myinfo.user.shortName}}.jpg"
+        alt="{{myinfo.user.favoriteItemDetails.name}}" />
+    </div>
+</div>
