@@ -1,0 +1,18 @@
+.text-color{
+  display: block;
+  text-align: left;
+  text-decoration: underline !important;
+  font-size: 20px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  text-decoration: underline !important;
+  color: #0056b3 !important;
+  background-color:#ffff;
+}
+.table {
+  border: 1px solid rgb(101, 100, 100);
+}
+.h3, h3 {
+  font-size: 24px;
+  color: #555;
+}

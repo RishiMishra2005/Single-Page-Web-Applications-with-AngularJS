@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NarrowItDownApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container" ng-controller="NarrowItDownController as menu">
+        <h1>Narrow Down Your Chinese Menu Choice</h1>
+        <div class="search">
+            <input type="text" placeholder="search term" class="form-control" ng-model="menu.shortName">
+            <div class="narrow-button">
+                <button class="button" ng-click="menu.matchedMenuItems(menu.shortName)">Narrow It Down For Me!</button>
+            </div>
+        </div>
+        <found-items found-items="menu.found" on-remove="menu.removeMenuItem(index)" on-empty="menu.message"></found-items>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

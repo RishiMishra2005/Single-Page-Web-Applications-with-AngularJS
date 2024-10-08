@@ -1,0 +1,29 @@
+h1 {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: 200px;
+    float: left;
+}
+
+.narrow-button {
+    float: left;
+    margin-left: 10px;
+}
+
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+}
+
+.search {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.jumbotron{
+    background-color: #aaacaa; 
+}

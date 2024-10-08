@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LunchCheck">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Checker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body >
+    <div class="container" ng-controller="LunchCheckController">
+        <h1>Lunch Checker</h1>
+        <div class="form-group">
+            <input id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch" class="form-control" ng-model="items">
+        </div>
+        <div class="form-group">
+            <button ng-click="checkItems()">Check If Too Much</button>
+        </div>
+        <div ng-show="!emptyItem && checked" class="alert alert-success">{{message}}</div>
+        <div ng-show="emptyItem && !validItem" class="alert alert-danger">Please enter data first</div>
+        <div ng-show="emptyItem && validItem" class="alert alert-danger">Please enter valid item. Empty is not considerable</div>
+    </div>
+</body>
+</html>
