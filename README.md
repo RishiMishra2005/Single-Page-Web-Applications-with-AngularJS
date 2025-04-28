@@ -1,6 +1,6 @@
 Coursera-Single-Page-Web-Applications-with-AngularJS
 Single Page Web Applications with AngularJS-Assignments
-
+Review the links properly and try to deploy it on your end.
 Dear all -
 
 Solution for assignement 1 is completed, and the github web url for accessing the application in the web is given below,
